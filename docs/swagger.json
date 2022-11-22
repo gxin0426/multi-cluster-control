@@ -1,0 +1,67 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "gin-web-example API接口文档",
+        "title": "快速初始化gin web项目",
+        "termsOfService": "https://github.com/anzhihe/gin-web-example",
+        "contact": {
+            "name": "anzhihe",
+            "url": "https://chegva.com",
+            "email": "anzhihe@foxmail.com"
+        },
+        "version": "1.0.1"
+    },
+    "paths": {
+        "/api/v1/test": {
+            "get": {
+                "description": "测试router访问是否正常",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Router测试相关接口"
+                ],
+                "summary": "router测试接口",
+                "parameters": [
+                    {
+                        "maxLength": 100,
+                        "minLength": 3,
+                        "description": "测试名称",
+                        "name": "name",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "type": "integer",
+                        "description": "页码",
+                        "name": "page",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "description": "每页数量",
+                        "name": "page_size",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "请求成功",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "请求错误"
+                    },
+                    "500": {
+                        "description": "内部繁忙"
+                    }
+                }
+            }
+        }
+    }
+}
