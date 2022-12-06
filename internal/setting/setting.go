@@ -4,7 +4,6 @@ import (
 	"flag"
 	"fmt"
 
-	//"github.com/BurntSushi/toml"
 	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"
 )

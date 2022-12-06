@@ -8,7 +8,7 @@ import (
 	"runtime/debug"
 	"strings"
 	"thor-backend/internal/setting"
-	"thor-backend/pkg/log"
+	"thor-backend/internal/logger"
 	"time"
 
 	"github.com/gin-gonic/gin"
